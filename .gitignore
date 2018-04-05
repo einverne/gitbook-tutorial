@@ -20,7 +20,6 @@ __pycache__/
 *.py[cod]
 *~
 # C extensions
-_book/
 *.so
 # Distribution / packaging
 .Python
@@ -63,4 +62,3 @@ coverage.xml
 docs/_build/
 
 .idea
-out
