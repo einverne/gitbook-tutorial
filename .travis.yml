@@ -7,10 +7,21 @@ language: node_js
 node_js:
   - stable
 before_install:
+  - export TZ='Asia/Shanghai'
   - npm install gitbook-cli -g
-  - npm install svgexport -g
   - gitbook install
-#script:
-# - "gitbook build"
 script:
-  - "bash ./deploy.sh"
+  - gitbook build . ./out/
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
+  skip_cleaup: true
+  local_dir: out
+  name: Ein Verne
+  email: git@einverne.info
+  on:
+    branch: master
