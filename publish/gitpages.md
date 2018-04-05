@@ -8,6 +8,7 @@
 
 下面将介绍使用一个仓库托管源码，而使用 Travis 自动将静态网站发布到 `gh-pages` 分支中。这样就可以避免提交源码的同时，还需要同步一遍 `gh-pages` 分支。
 
+[domenic](https://gist.github.com/domenic/ec8b0fc8ab45f39403dd) 制作了一个脚本，当 master 分支更新时，自动使用 CI Travis 拉取更新，然后和 `gh-pages` 分支做比较，如果有差异了，自动将 master 分支的修改提交到 `gh-pages` 分支。
 
 ## 使用项目的Pages服务
 
