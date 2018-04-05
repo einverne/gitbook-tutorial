@@ -1,0 +1,16 @@
+env:
+  global:
+  - ENCRYPTION_LABEL: "deploy_github.enc"
+  - COMMIT_AUTHOR_EMAIL: "git@einverne.info"
+sudo: required
+language: node_js
+node_js:
+  - stable
+before_install:
+  - npm install gitbook-cli -g
+  - npm install svgexport -g
+  - gitbook install
+#script:
+# - "gitbook build"
+script:
+  - "bash ./deploy.sh"
