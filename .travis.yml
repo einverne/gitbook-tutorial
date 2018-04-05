@@ -11,7 +11,7 @@ before_install:
   - npm install gitbook-cli -g
   - gitbook install
 script:
-  - gitbook build . ./out/
+  - gitbook build . out
 
 branches:
   only:
