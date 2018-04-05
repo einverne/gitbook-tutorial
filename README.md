@@ -1,5 +1,5 @@
 # Gitbook 使用教程
-使用 Git 和 Markdown 制作精美在线电子书
+使用 Git 和 Markdown 制作精美在线电子书。
 
 ## 支持格式
 
