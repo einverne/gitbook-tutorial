@@ -49,6 +49,8 @@ before_deploy:
 
 deploy:
   provider: pages
+  edge:
+      branch: v1.8.47
   skip-cleaup: true
   keep-history: false
   local-dir: _book
