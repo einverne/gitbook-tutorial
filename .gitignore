@@ -7,6 +7,14 @@
 ## https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 
+# Book build output
+_book
+
+# eBook build output
+*.epub
+*.mobi
+*.pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
