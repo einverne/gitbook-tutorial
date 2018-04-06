@@ -1,54 +1,52 @@
 env:
   global:
-  - ENCRYPTION_LABEL: "deploy_github.enc"
-  - COMMIT_AUTHOR_EMAIL: "git@einverne.info"
+  - ENCRYPTION_LABEL: deploy_github.enc
+  - COMMIT_AUTHOR_EMAIL: git@einverne.info
 sudo: required
 language: node_js
 node_js:
-  - stable
+- stable
+
 before_install:
-  - export TZ='Asia/Shanghai'
-  - npm install gitbook-cli -g
-  - npm install svgexport -g
-  - gitbook fetch 3.2.3
-  - sudo apt-get update -qq
-  - sudo -v && wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+- export TZ='Asia/Shanghai'
+- npm install gitbook-cli -g
+- npm install svgexport -g
+- gitbook fetch 3.2.3
+- sudo apt-get update -qq
+- sudo -v && wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
+  | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n');
+  exec(sys.stdin.read()); main()"
 
 install:
-  - gitbook install
+- gitbook install
 
 before_script:
-  - mkdir -p ~/.fonts/noto
-  - mkdir -p ~/raw_fonts/{NotoSans-unhinted,NotoSansCJKsc-hinted,NotoSansCJKtc-hinted}
-  - wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-unhinted.zip
-  - unzip ~/raw_fonts/NotoSans-unhinted.zip -d ~/raw_fonts/NotoSans-unhinted
-  - wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip
-  - unzip ~/raw_fonts/NotoSansCJKsc-hinted.zip -d ~/raw_fonts/NotoSansCJKsc-hinted
-  - wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip
-  - unzip ~/raw_fonts/NotoSansCJKtc-hinted.zip -d ~/raw_fonts/NotoSansCJKtc-hinted
-
+- mkdir -p ~/.fonts/noto
+- mkdir -p ~/raw_fonts/{NotoSans-unhinted,NotoSansCJKsc-hinted,NotoSansCJKtc-hinted}
+- wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-unhinted.zip
+- unzip ~/raw_fonts/NotoSans-unhinted.zip -d ~/raw_fonts/NotoSans-unhinted
+- wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip
+- unzip ~/raw_fonts/NotoSansCJKsc-hinted.zip -d ~/raw_fonts/NotoSansCJKsc-hinted
+- wget -P ~/raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip
+- unzip ~/raw_fonts/NotoSansCJKtc-hinted.zip -d ~/raw_fonts/NotoSansCJKtc-hinted
 
 script:
-  - mv -t ~/.fonts/noto ~/raw_fonts/NotoSansCJKsc-hinted/*-DemiLight.otf ~/raw_fonts/NotoSansCJKsc-hinted/*-Bold.otf ~/raw_fonts/NotoSansCJKsc-hinted/*-Black.otf
-  - sudo fc-cache -f -v
-  - gitbook pdf .
-  - gitbook epub .
-  - gitbook mobi .
-  - rm ~/.fonts/noto/*.otf
-
-  - gitbook build .
+- mv -t ~/.fonts/noto ~/raw_fonts/NotoSansCJKsc-hinted/*-DemiLight.otf ~/raw_fonts/NotoSansCJKsc-hinted/*-Bold.otf
+  ~/raw_fonts/NotoSansCJKsc-hinted/*-Black.otf
+- sudo fc-cache -f -v
+- gitbook pdf .
+- gitbook epub .
+- gitbook mobi .
+- rm ~/.fonts/noto/*.otf
+- gitbook build .
 
 branches:
   only:
-    - master
-
-before_deploy:
-  - tar czvf book_html.tar.gz _book/
+  - master
 
 deploy:
   provider: pages
   skip_cleaup: true
-  github_token: $GITHUB_TOKEN
   keep-history: false
   local_dir: _book
   repo: einverne/gitbook-tutorial
@@ -57,6 +55,7 @@ deploy:
   target-branch: gh-pages
   on:
     branch: master
-
+  github-token:
+    secure: mQ7hv7NAZH1ZMkQKpzXNEnaFF8l9gPaEVZ3cLBChqkcczINicqBwuBsuHjURfwshfCjPJeDiFBjGdpDoVdZHQCnusuVYURpTpVcDuTZ7SMK+0fg+NuPz8G71QY94yzMkm2Saj6TDLyRq98P8cfqZ+Wf+d9eoeIoGyDXr+KgnXh+O9nFLISk4SJvoFMQwZPaezXio+iW42If+tZ6lVq51O8DsC/OtzSQF+cC5Dlgybb9yeXp+jenKLpTYlDbMkDKhGAAXM7JOQjFO7Ge4e3hke2nl83jMrQniQp3g5HNiniAwMtL14KQybOA5ntDcP8FnDSbqw9FT6H2HJ2NxiXljNKX3DS5Yg24+I0u8DNaFUw3X2q7ab95vf6OQNYi+FEiIMaJLSs0kEzEaCvuz2ovf8Fv81TGZnPadyxzY1TG0ht1TKbzkwGFv6CtRT8BctJdd2T19kpLnSnCbGjgk0+lVMDZSKdiWVtjayhQaysc8aD109u/Kjn+VQFR+gx2tsxSFQo6CyxowryryNyexIr9evXg9ZPa/yFaqyE5SsSL5L7x4yj2pn9IS5WRydVUkaHhcxsNYlaCG8jbfKP2rmY0GBLic2b6GvcG12UWcNeGyMz7l9P/cr2I/ti+iZFe4floG3DdfIVIE4IRG3xW3qkkgiQ+TgpNkhXBuljJrDPZSXtg=
 after_success:
-  - ls -lh
+- ls -lh
