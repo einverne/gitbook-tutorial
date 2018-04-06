@@ -44,13 +44,11 @@ branches:
   only:
   - master
 
-before_deploy:
-  - sed -i '/_book/d' .gitignore
+#before_deploy:
+#  - sed -i '/_book/d' .gitignore
 
 deploy:
   provider: pages
-  edge:
-      branch: v1.8.47
   skip-cleaup: true
   keep-history: false
   local-dir: _book
