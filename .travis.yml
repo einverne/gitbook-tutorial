@@ -51,11 +51,9 @@ deploy:
   provider: pages
   skip-cleaup: true
   keep-history: false
-  local-dir: _book
-  repo: einverne/gitbook-tutorial
+  local-dir: "/_book"
   name: Ein Verne
   email: git@einverne.info
-  target-branch: gh-pages
   on:
     branch: master
   github-token:
