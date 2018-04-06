@@ -49,15 +49,14 @@ branches:
 
 deploy:
   provider: pages
-  edge: true
-  skip-cleaup: true
-  keep-history: false
-  local-dir: _book
+  skip_cleaup: true
+  local_dir: _book
   name: Ein Verne
   email: git@einverne.info
+  verbose: true
   on:
     branch: master
-  github-token:
+  github_token:
     secure: mQ7hv7NAZH1ZMkQKpzXNEnaFF8l9gPaEVZ3cLBChqkcczINicqBwuBsuHjURfwshfCjPJeDiFBjGdpDoVdZHQCnusuVYURpTpVcDuTZ7SMK+0fg+NuPz8G71QY94yzMkm2Saj6TDLyRq98P8cfqZ+Wf+d9eoeIoGyDXr+KgnXh+O9nFLISk4SJvoFMQwZPaezXio+iW42If+tZ6lVq51O8DsC/OtzSQF+cC5Dlgybb9yeXp+jenKLpTYlDbMkDKhGAAXM7JOQjFO7Ge4e3hke2nl83jMrQniQp3g5HNiniAwMtL14KQybOA5ntDcP8FnDSbqw9FT6H2HJ2NxiXljNKX3DS5Yg24+I0u8DNaFUw3X2q7ab95vf6OQNYi+FEiIMaJLSs0kEzEaCvuz2ovf8Fv81TGZnPadyxzY1TG0ht1TKbzkwGFv6CtRT8BctJdd2T19kpLnSnCbGjgk0+lVMDZSKdiWVtjayhQaysc8aD109u/Kjn+VQFR+gx2tsxSFQo6CyxowryryNyexIr9evXg9ZPa/yFaqyE5SsSL5L7x4yj2pn9IS5WRydVUkaHhcxsNYlaCG8jbfKP2rmY0GBLic2b6GvcG12UWcNeGyMz7l9P/cr2I/ti+iZFe4floG3DdfIVIE4IRG3xW3qkkgiQ+TgpNkhXBuljJrDPZSXtg=
 
 after_success:
