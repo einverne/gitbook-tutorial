@@ -49,9 +49,10 @@ branches:
 
 deploy:
   provider: pages
+  edge: true
   skip-cleaup: true
   keep-history: false
-  local-dir: "/_book"
+  local-dir: _book
   name: Ein Verne
   email: git@einverne.info
   on:
