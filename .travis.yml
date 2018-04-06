@@ -2,7 +2,6 @@ env:
   global:
   - ENCRYPTION_LABEL: "deploy_github.enc"
   - COMMIT_AUTHOR_EMAIL: "git@einverne.info"
-  - GITBOOK_DIR: "static"
 sudo: required
 language: node_js
 node_js:
@@ -15,7 +14,7 @@ before_install:
 install:
   - gitbook install
 script:
-  - gitbook build . $GITBOOK_DIR
+  - gitbook build .
 
 branches:
   only:
@@ -26,7 +25,7 @@ deploy:
   skip_cleaup: true
   github_token: $GITHUB_TOKEN
   keep-history: false
-  local_dir: $GITBOOK_DIR
+  local_dir: _book
   repo: einverne/gitbook-tutorial
   name: Ein Verne
   email: git@einverne.info
