@@ -18,5 +18,6 @@
 * [发布](publish/README.md)
    * [发布到Gitbook.com](publish/gitbook.md)
    * [发布到Github Pages](publish/gitpages.md)
+   * [发布到文件](publish/file.md)
 * [结束](end/README.md)
 
