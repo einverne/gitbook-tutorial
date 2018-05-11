@@ -1,4 +1,4 @@
-# Gitbook安装
+# Gitbook命令安装
 
 Gitbook是使用NPM来进行安装的，可以在命令行中输入下面的命令进行安装：
 

@@ -20,7 +20,7 @@ Gitbook 使用 `SUMMARY.md` 文件来实现目录结构，通过该文件可以�
 
 md 文件可以存放在子文件夹中，另外需要注意的是 Gitbook 目录结构限定为三级。
 
-用户还可以通过标题或者水平分割线将 Gitbook 目录分为不同的部分，比如
+用户还可以通过标题或者**水平分割线**将 Gitbook 目录分为不同的部分，比如
 
 ```markdown
 # Summary
@@ -40,3 +40,23 @@ md 文件可以存放在子文件夹中，另外需要注意的是 Gitbook 目�
 
 * [Last part without title](part3/title.md)
 ```
+
+
+## 锚点标记
+
+目录结构中也可以直接指向文件中的锚点标记，让目录结构更加清晰
+
+```markdown
+# Summary
+
+### Part I
+
+* [Part I](part1/README.md)
+    * [Writing is nice](part1/README.md#writing)
+    * [GitBook is nice](part1/README.md#gitbook)
+* [Part II](part2/README.md)
+    * [We love feedback](part2/README.md#feedback)
+    * [Better tools for authors](part2/README.md#tools)
+
+```
+

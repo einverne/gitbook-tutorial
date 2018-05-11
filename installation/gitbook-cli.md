@@ -39,6 +39,8 @@ gitbook build ./ --log=debug --debug
 
 当电子书内容制作好之后，可以使用如下命令来生成 HTML 静态网页版电子书。该命令会在当前文件夹中生成 `_book` 文件夹，这个文件夹中的内容就是静态网页版电子书。
 
+使用 `--log=debug --debug` 可以用来调试，会打印出 stack trace。
+
 ## 查看帮助
 
 ```bash
