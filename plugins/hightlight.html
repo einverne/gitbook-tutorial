@@ -1,0 +1,644 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>代码高亮 · Gitbook使用入门</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ein Verne">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../output/" />
+    
+    
+    <link rel="prev" href="disqus.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://einverne.github.io/" target="_blank" class="custom-link">博客地址</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    基本安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../installation/nodejs-install.html">
+            
+                <a href="../installation/nodejs-install.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    Node.js安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../installation/gitbook-install.html">
+            
+                <a href="../installation/gitbook-install.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    Gitbook命令安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../installation/gitbook-cli.html">
+            
+                <a href="../installation/gitbook-cli.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    Gitbook命令行速览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../content/">
+            
+                <a href="../content/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    电子书目录结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../content/basic.html">
+            
+                <a href="../content/basic.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    README.md 与 SUMMARY编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../content/multi-summary.html">
+            
+                <a href="../content/multi-summary.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    目录初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../content/file-ignore.html">
+            
+                <a href="../content/file-ignore.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    忽略文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../content/configuration.html">
+            
+                <a href="../content/configuration.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../content/cover.html">
+            
+                <a href="../content/cover.html">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="disqus.html">
+            
+                <a href="disqus.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    评论插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="hightlight.html">
+            
+                <a href="hightlight.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    代码高亮
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../output/">
+            
+                <a href="../output/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    电子书输出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../output/static.html">
+            
+                <a href="../output/static.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    输出为静态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../output/pdf.html">
+            
+                <a href="../output/pdf.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    输出PDF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../publish/">
+            
+                <a href="../publish/">
+            
+                    
+                        <b>1.6.</b>
+                    
+                    发布
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../publish/gitbook.html">
+            
+                <a href="../publish/gitbook.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    发布到Gitbook.com
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../publish/gitpages.html">
+            
+                <a href="../publish/gitpages.html">
+            
+                    
+                        <b>1.6.2.</b>
+                    
+                    发布到Github Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../publish/file.html">
+            
+                <a href="../publish/file.html">
+            
+                    
+                        <b>1.6.3.</b>
+                    
+                    发布到文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../end/">
+            
+                <a href="../end/">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    结束
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >代码高亮</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;">&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;</h1>
+<p>&#x4F7F;&#x7528; Prism.js &#x4E3A;&#x8BED;&#x6CD5;&#x6DFB;&#x52A0;&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#xFF0C;&#x9700;&#x8981;&#x5C06; highlight &#x63D2;&#x4EF6;&#x53BB;&#x6389;&#x3002;</p>
+<p>&#x5730;&#x5740;&#xFF1A; <a href="https://plugins.gitbook.com/plugin/prism" target="_blank">https://plugins.gitbook.com/plugin/prism</a> <a href="https://plugins.gitbook.com/plugin/prism-themes" target="_blank">https://plugins.gitbook.com/plugin/prism-themes</a></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        <span class="hljs-string">&quot;prism&quot;</span>,
+        <span class="hljs-string">&quot;-highlight&quot;</span>
+    ],
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;prism&quot;</span>: {
+            <span class="hljs-string">&quot;css&quot;</span>: [
+                <span class="hljs-string">&quot;prism-themes/themes/prism-base16-ateliersulphurpool.light.css&quot;</span>
+            ]
+        }
+    }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x80CC;&#x666F;&#x8272;&#x3001;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x7B49;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; website.css &#x5B9A;&#x4E49; pre[class*=&quot;language-&quot;] &#x7C7B;&#x6765;&#x4FEE;&#x6539;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">pre</span><span class="hljs-selector-attr">[class*=&quot;language-&quot;]</span> {
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f7f7f7</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.2em</span>;
+}
+</code></pre>
+<p><div id="page-footer" class="localized-footer"><hr><p><em>&#x7531; <a href="https://blog.einverne.info" target="_blank">Ein Verne</a> &#x901A;&#x8FC7; <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03;</em></p>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="disqus.html" class="navigation navigation-prev " aria-label="Previous page: 评论插件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../output/" class="navigation navigation-next " aria-label="Next page: 电子书输出">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"代码高亮","level":"1.4.2","depth":2,"next":{"title":"电子书输出","level":"1.5","depth":1,"path":"output/README.md","ref":"output/README.md","articles":[{"title":"输出为静态网站","level":"1.5.1","depth":2,"path":"output/static.md","ref":"output/static.md","articles":[]},{"title":"输出PDF","level":"1.5.2","depth":2,"path":"output/pdf.md","ref":"output/pdf.md","articles":[]}]},"previous":{"title":"评论插件","level":"1.4.1","depth":2,"path":"plugins/disqus.md","ref":"plugins/disqus.md","articles":[]},"dir":"ltr"},"config":{"plugins":["editlink","image-captions","splitter","expandable-chapters-small","-mathjax","ga","disqus","-lunr","-search","search-pro","sitemap","localized-footer"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbook-tutorial"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/einverne/gitbook-tutorial"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba"},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"sitemap":{"hostname":"https://einverne.github.io/"},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-60753376-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"image-captions":{"caption":"Image - _CAPTION_","align":"center","variable_name":"_pictures"}},"theme":"default","keywords":"Gitbook使用手册,markdown,gitbook,","author":"Ein Verne","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"installation/nodejs-install.html#fig1.2.1.1","level":"1.2.1","align":"center","list_caption":"Figure: Node.js","alt":"Node.js","nro":1,"url":"../imgs/node.js.png","index":1,"caption_template":"Image - _CAPTION_","label":"Node.js","attributes":{},"skip":false,"key":"1.2.1.1"},{"backlink":"output/static.html#fig1.5.1.1","level":"1.5.1","align":"center","list_caption":"Figure: gitbook serve preview","alt":"gitbook serve preview","nro":2,"url":"../imgs/gitbook_serve.png","index":1,"caption_template":"Image - _CAPTION_","label":"gitbook serve preview","attributes":{},"skip":false,"key":"1.5.1.1"},{"backlink":"publish/gitpages.html#fig1.6.2.1","level":"1.6.2","align":"center","list_caption":"Figure: Github Pages","alt":"Github Pages","nro":3,"url":"../imgs/gh-pages-setting.png","index":1,"caption_template":"Image - _CAPTION_","label":"Github Pages","attributes":{},"skip":false,"key":"1.6.2.1"}]},"title":"Gitbook使用入门","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"博客地址":"https://einverne.github.io/"},"tail":{"Gitbook使用入门":"http://einverne.github.io/gitbook-tutorial"},"gitbook":false,"sharing":{"google":true,"facebook":true,"twitter":true,"weibo":true,"qrcode":true}},"introduction":{"path":"README.md","title":"Gitbook使用入门概述"},"gitbook":"*","description":"Gitbook使用介绍"},"file":{"path":"plugins/hightlight.md","mtime":"2018-10-02T11:12:42.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T11:14:35.149Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
